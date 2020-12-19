@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="popular_price_text">#77777777</color>
+    <color name="color_primary">#E2066D</color>
+
+
+    <color name="cakes_card_end">#FF8F44</color>
+    <color name="cakes_card_start">#FFC578</color>
+    <color name="cakes_card_shadow">#75431F63</color>
+    <color name="chocolate_card_end">#EE549D</color>
+    <color name="chocolate_card_start">#F96776</color>
+    <color name="chocolate_card_shadow">#751F5063</color>
+    <color name="cookies_card_end">#1FA3E2</color>
+    <color name="cookies_card_start">#32C5DC</color>
+    <color name="cookies_card_shadow">#1F5D7563</color>
+    <color name="prize_shadow">#F7D9DF</color>
+
+    <color name="search_background">#F1F1F1</color>
+    <color name="discover_button_background">#C94879</color>
+    <color name="text_search_color">#555555</color>
+
+    // Details fragment's colors
+    <color name="subcategory_name_color">#8B004F</color>
+    <color name="floating_frame_shadow">#0000001A</color>
+
+</resources>

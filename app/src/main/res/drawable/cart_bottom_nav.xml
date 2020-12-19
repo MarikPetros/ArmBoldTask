@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:bottom="5dp"
+        android:top="5dp"
+        android:drawable="@drawable/oval_dark_pink" />
+    <item
+        android:drawable="@drawable/shopping_cart__4_"
+        android:gravity="center"/>
+</layer-list>

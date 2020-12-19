@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:isScrollContainer="true"
+    android:nestedScrollingEnabled="true"
+    android:rotationX="0"
+    android:rotationY="0"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.HomeFragment">
+
+        <ImageView
+            android:id="@+id/img_arev2"
+            android:layout_width="142dp"
+            android:layout_height="149dp"
+            android:layout_gravity="top|end"
+            android:contentDescription="@string/picture_arev"
+            android:src="@drawable/arev2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/search_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="20dp"
+            android:autofillHints="@string/text_search"
+            android:background="@drawable/search_background"
+            android:drawableStart="@drawable/search__6_"
+            android:drawablePadding="15.07dp"
+            android:fontFamily="@font/circe_regular"
+            android:hint="@string/text_search"
+            android:inputType="none|text"
+            android:paddingStart="19.07dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="19.07dp"
+            android:paddingBottom="16.07dp"
+            android:textColor="@color/text_search_color"
+            android:textColorHint="@color/text_search_color"
+            app:layout_constraintBottom_toBottomOf="@id/img_arev2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <cn.enjoytoday.shadow.ShadowLayout
+            android:id="@+id/layout_prize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="3dp"
+            app:blurRadius="23dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_view"
+            app:shadowColor="@color/prize_shadow"
+            app:shadowRadius="29dp"
+            app:xOffset="0dp"
+            app:yOffset="3dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:background="@drawable/prize_roundcorner"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_view">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/WhiteText"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:text="@string/find_code"
+                    android:textAppearance="@style/WhiteText"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="23sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="87dp"
+                    android:layout_height="29dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/discover_background"
+                    android:fontFamily="@font/circe_regular"
+                    android:gravity="center"
+                    android:text="@string/discover"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </cn.enjoytoday.shadow.ShadowLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/string_categories"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="106dp"
+            android:fontFamily="@font/circe_bold"
+            android:text="@string/categories"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_prize" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/string_categories"
+            tools:context=".ui.HomeFragment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/string_most_popular"
+            android:layout_width="0dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="106dp"
+            android:fontFamily="@font/circe_bold"
+            android:text="@string/most_popular"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_categories" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_1"
+            android:layout_width="0dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/string_most_popular">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/product_picture1_1"
+                android:layout_width="101dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:id="@+id/product_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/circe_regular"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/scene_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start">
+
+                    <include layout="@layout/cart_popular" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_popular_price1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textColor="@color/popular_price_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_2"
+            android:layout_width="0dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/product_picture1_2"
+                android:layout_width="101dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:id="@+id/product_name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/circe_regular"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/scene_popular2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start">
+
+                    <include layout="@layout/cart_popular" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_popular_price2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textColor="@color/popular_price_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_3"
+            android:layout_width="0dp"
+            android:layout_height="107dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/product_picture1_3"
+                android:layout_width="101dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:id="@+id/product_name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/circe_regular"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|bottom"
+                android:orientation="horizontal"
+                android:paddingStart="5dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="5dp">
+
+                <FrameLayout
+                    android:id="@+id/scene_popular3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start">
+
+                    <include layout="@layout/cart_popular" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/txt_popular_price3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/nunito_regular"
+                    android:textColor="@color/popular_price_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

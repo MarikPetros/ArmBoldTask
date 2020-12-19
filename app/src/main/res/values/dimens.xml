@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="search_corner_radius">36dp</dimen>
+    <dimen name="bottom_nav_top_corner">28dp</dimen>
+    <dimen name="bottom_menu_bottom_corner_radius">8dp</dimen>
+    <dimen name="discover_corner_radius">24dp</dimen>
+
+
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/popular_cart_back"
+        android:gravity="center"
+        android:top="8.03dp"
+        android:bottom="4.97dp"
+        android:end="5dp"
+        android:start="5dp"
+        tools:targetApi="m" />
+    <item
+        android:drawable="@drawable/supermarket"
+        android:start="11dp"
+        android:end="11.82dp"
+        android:top="7.37dp"
+        android:bottom="7.29dp"
+        android:gravity="center"
+        tools:targetApi="m" />
+
+</layer-list>
